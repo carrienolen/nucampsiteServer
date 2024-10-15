@@ -21,7 +21,7 @@ partnerRouter
         console.log("Partner Created ", partner);
         res.statusCode = 200;
         res.setHeader("Content-Type", "application/json");
-        res.json(Partner);
+        res.json(partner);
       })
       .catch((err) => next(err));
   })
