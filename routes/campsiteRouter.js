@@ -222,7 +222,7 @@ campsiteRouter
               .catch((err) => next(err));
           } else {
             const err = new Error(
-              "You are not authorized to update this comment!"
+              "You are not authorized to edit or remove this comment!"
             );
             err.status = 403;
             return next(err);
@@ -258,7 +258,7 @@ campsiteRouter
               .catch((err) => next(err));
           } else {
             const err = new Error(
-              "You are not authorized to delete this comment!"
+              "You are not authorized to edit or remove this comment!"
             );
             err.status = 403;
             return next(err);
