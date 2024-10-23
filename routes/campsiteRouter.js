@@ -205,7 +205,7 @@ campsiteRouter
         if (campsite && campsite.comments.id(req.params.commentId)) {
           const comment = campsite.comments.id(req.params.commentId);
           if (comment.author.equals(req.user._id)) {
-            // Check if the user is the author
+            // Task 4 - checking if the user is the comment author
             if (req.body.rating) {
               comment.rating = req.body.rating;
             }
@@ -246,8 +246,8 @@ campsiteRouter
         if (campsite && campsite.comments.id(req.params.commentId)) {
           const comment = campsite.comments.id(req.params.commentId);
           if (comment.author.equals(req.user._id)) {
-            // Check if the user is the author
-            comment.deleteOne(); // Remove the comment
+            // Task 4-  checking if the user is the comment author
+            comment.deleteOne();
             campsite
               .save()
               .then((campsite) => {
